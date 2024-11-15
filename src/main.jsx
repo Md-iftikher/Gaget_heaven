@@ -1,18 +1,18 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-import Errorpage from "./Components/Errorpage/Errorpage.jsx"
-import Home from './Components/Home/Home.jsx'
-
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import './index.css';
+import App from './App.jsx';
+import Errorpage from "./Components/Errorpage/Errorpage.jsx";
+import Home from './Components/Home/Home.jsx';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import Root from './Components/Root/Root.jsx';
-import Dashboard from './Components/Dashboard/Dashboard.jsx'
-import Statistics from './Components/Statistics/Statistics.jsx'
-
+import Dashboard from './Components/Dashboard/Dashboard.jsx';
+import Statistics from './Components/Statistics/Statistics.jsx';
+import ProductDetails from './Components/ProductDetails/ProductDetails.jsx';
+import { CartProvider } from './Components/ContextApi/Context';
 
 const router = createBrowserRouter([
   {
@@ -25,7 +25,12 @@ const router = createBrowserRouter([
         element: <Home></Home>
       },
       {
-        path:"dashboard",
+        path: "products/:product_id",
+        element: <ProductDetails></ProductDetails>,
+        loader: () => fetch("/ProductData.json")
+      },
+      {
+        path: "dashboard",
         element: <Dashboard></Dashboard>
       },
       {
@@ -38,6 +43,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <CartProvider>
+      <RouterProvider router={router} />
+    </CartProvider>
   </StrictMode>,
-)
+);

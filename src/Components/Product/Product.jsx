@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Product = ({ product }) => {
   const {
@@ -14,9 +15,9 @@ const Product = ({ product }) => {
 
   return (
     <div>
-      <div>
-        <div className="card bg-base-100 w-[320px] h-[380px] shadow-xl">
-          <figure className="bg-slate-200 p-3">
+      <div className="">
+        <div className="card bg-base-100 w-[320px] h-[380px] shadow-xl mb-2">
+          <figure className="p-3">
             <img
             className="w-[280px] h-[180px]"
               src={product_image}
@@ -24,11 +25,11 @@ const Product = ({ product }) => {
             />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div className="card-actions justify-end">
-              <button className="btn btn-primary">Buy Now</button>
-            </div>
+            <h2 className="card-title">{product_title}</h2>
+            <p>Price: {price}$</p>
+            <Link to={`products/${product_id}`} className="card-actions justify-start">
+              <button className="btn border-[#9538E2] text-[#9538E2]">View Details</button>
+            </Link>
           </div>
         </div>
       </div>

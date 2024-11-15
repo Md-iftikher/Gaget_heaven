@@ -26,8 +26,8 @@ const Products = () => {
   };
 
   return (
-    <div>
-      <h3>Explore Cutting-Edge Gadgets: {filteredProducts.length}</h3>
+    <div className="">
+      <h3 className="text-3xl font-bold my-6 text-center">Explore Cutting-Edge Gadgets</h3>
 
       <div className="flex gap-4 ">
         <div className="flex flex-col p-3 bg-white gap-3 w-1/6 h-96 rounded-lg">
