@@ -10,6 +10,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Root from './Components/Root/Root.jsx';
+import Dashboard from './Components/Dashboard/Dashboard.jsx'
+import Statistics from './Components/Statistics/Statistics.jsx'
 
 
 const router = createBrowserRouter([
@@ -21,6 +23,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>
+      },
+      {
+        path:"dashboard",
+        element: <Dashboard></Dashboard>
+      },
+      {
+        path: "statitics",
+        element: <Statistics></Statistics>
       }
     ]
   },

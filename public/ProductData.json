@@ -1,0 +1,190 @@
+[
+  {
+    "product_id": 1,
+    "product_title": "MacBook Pro 14",
+    "product_image": "https://www.hoxtonmacs.co.uk/cdn/shop/products/apple-macbook-pro-14-inch-macbook-pro-14-inch-m1-pro-10-core-space-grey-2021-fair-40441517834556_540x.jpg?v=1680268675",
+    "category": "Laptop",
+    "price": 1999,
+    "description": "Powerful performance, portable design.",
+    "specification": [
+      "M2 Pro chip",
+      "Liquid Retina XDR display",
+      "1080p FaceTime HD camera"
+    ],
+    "availability": true,
+    "rating": 4.9,
+    "color": "Space Gray, Silver"
+  },
+  {
+    "product_id": 2,
+    "product_title": "Dell XPS 13 Plus",
+    "product_image": "https://m.media-amazon.com/images/I/710EGJBdIML._AC_SL1500_.jpg",
+    "category": "Laptop",
+    "price": 1299,
+    "description": "Sleek and stylish, powerful performance.",
+    "specification": [
+      "12th Gen Intel Core processor",
+      "OLED display",
+      "ExpressCharge Boost"
+    ],
+    "availability": true,
+    "rating": 4.6,
+    "color": "Platinum Silver, Graphite"
+  },
+  {
+    "product_id": 3,
+    "product_title": "HP Spectre x360",
+    "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/HP-Spectre-x360-Convertible-14-EF2013DX-a-1801.jpg",
+    "category": "Laptop",
+    "price": 1499,
+    "description": "Versatile 2-in-1 laptop with a sleek design.",
+    "specification": [
+      "12th Gen Intel Core processor",
+      "OLED display",
+      "360-degree hinge"
+    ],
+    "availability": true,
+    "rating": 4.8,
+    "color": "Night Black, Pale Rose Gold"
+  },
+  {
+    "product_id": 4,
+    "product_title": "Lenovo ThinkPad X1 Carbon",
+    "product_image": "https://aroz.com.bd/wp-content/uploads/2022/10/tp-x1-carbon-g6-header.webp",
+    "category": "Laptop",
+    "price": 1399,
+    "description": "Lightweight and powerful business laptop.",
+    "specification": [
+      "12th Gen Intel Core processor",
+      "14-inch UHD display",
+      "Military-grade durability"
+    ],
+    "availability": true,
+    "rating": 4.7,
+    "color": "Black"
+  },
+  {
+    "product_id": 5,
+    "product_title": "Asus ZenBook 14",
+    "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/ASUS-Zenbook-14-Q415MA-a-2057.jpg",
+    "category": "Laptop",
+    "price": 1099,
+    "description": "Elegant design with powerful performance.",
+    "specification": [
+      "AMD Ryzen 7 processor",
+      "Full HD display",
+      "NanoEdge bezels"
+    ],
+    "availability": true,
+    "rating": 4.5,
+    "color": "Royal Blue"
+  },
+  {
+    "product_id": 6,
+    "product_title": "Microsoft Surface Laptop 5",
+    "product_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQW--WZFQoh1d8QF9igjQpvx9gN75IQIY-dg&s",
+    "category": "Laptop",
+    "price": 999,
+    "description": "Thin, light, and powerful laptop.",
+    "specification": [
+      "12th Gen Intel Core processor",
+      "PixelSense touchscreen",
+      "All-day battery life"
+    ],
+    "availability": true,
+    "rating": 4.6,
+    "color": "Platinum, Matte Black"
+  },
+  {
+    "product_id": 7,
+    "product_title": "iPhone 15 Pro Max",
+    "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-15-Plus-(2)-(1)-6945.jpg",
+    "category": "Phone",
+    "price": 1299,
+    "description": "The ultimate smartphone experience.",
+    "specification": ["A17 Bionic chip", "Dynamic Island", "ProMotion display"],
+    "availability": true,
+    "rating": 4.8,
+    "color": "Space Black, Silver, Gold, Deep Purple"
+  },
+  {
+    "product_id": 8,
+    "product_title": "Samsung Galaxy S24 Ultra",
+    "product_image": "https://rajshahitech.com/wp-content/uploads/2024/01/Samsung-Galaxy-S24-Ultra-grey-new.webp",
+    "category": "Phone",
+    "price": 1199,
+    "description": "The future of Android.",
+    "specification": [
+      "Snapdragon 8 Gen 3",
+      "200MP camera",
+      "Adaptive refresh rate display"
+    ],
+    "availability": true,
+    "rating": 4.7,
+    "color": " Phantom Black, Cream, Green, Lavender"
+  },
+  {
+    "product_id": 9,
+    "product_title": "Google Pixel 8 Pro",
+    "product_image": "https://mobilebuzzbd.com/wp-content/uploads/2023/12/Pixel-8-Pro.jpg",
+    "category": "Phone",
+    "price": 999,
+    "description": "Exceptional camera and AI features.",
+    "specification": [
+      "Google Tensor G3 chip",
+      "50MP main camera",
+      "Smooth display"
+    ],
+    "availability": true,
+    "rating": 4.6,
+    "color": "Obsidian, Porcelain"
+  },
+  {
+    "product_id": 10,
+    "product_title": "OnePlus 11",
+    "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/OnePlus-11-(3)-4957.jpg",
+    "category": "Phone",
+    "price": 899,
+    "description": "Fast performance and stunning display.",
+    "specification": [
+      "Snapdragon 8 Gen 2",
+      "120Hz AMOLED display",
+      "Fast charging"
+    ],
+    "availability": true,
+    "rating": 4.5,
+    "color": "Eternal Green, Titan Black"
+  },
+  {
+    "product_id": 11,
+    "product_title": "Apple Watch Series 9",
+    "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/Apple-Watch-Series-9-(4)-7054.jpg",
+    "category": "Smartwatch",
+    "price": 399,
+    "description": "The ultimate smartwatch.",
+    "specification": [
+      "S9 chip",
+      "Always-On display",
+      "Advanced health tracking"
+    ],
+    "availability": true,
+    "rating": 4.9,
+    "color": "Midnight, Silver, Starlight"
+  },
+  {
+    "product_id": 12,
+    "product_title": "Samsung Galaxy Watch 6 Classic",
+    "product_image": "https://www.startech.com.bd/image/cache/catalog/smart-watch/samsung/galaxy-watch-6-classic-43mm/galaxy-watch6-classic-black-43mm-001-500x500.jpg",
+    "category": "Smartwatch",
+    "price": 349,
+    "description": "The classic smartwatch, reimagined.",
+    "specification": [
+      "Exynos W930 processor",
+      "Rotating bezel",
+      "Blood pressure monitoring"
+    ],
+    "availability": true,
+    "rating": 4.7,
+    "color": "Black, Silver"
+  }
+]

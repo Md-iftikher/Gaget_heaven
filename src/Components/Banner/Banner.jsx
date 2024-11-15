@@ -1,11 +1,11 @@
 import React from "react";
-// import banner_img from "../../assets/books.jpg"
+import banner_img from "../../assets/banner.jpg"
 const Banner = () => {
   return (
     <div>
-      <div className="hero min-h-screen bg-[#9538E2]">
+      <div className="hero h-[470px] bg-[#9538E2] rounded-b-lg">
         <div className="hero-content flex-col lg:flex-row-reverse gap-10">
-          <div className="grid gap-10 p-32 text-center text-white">
+          <div className="grid gap-5 px-32 py-10 text-center text-white">
             <h1 className="text-5xl font-bold">
               Upgrade Your Tech Accessorize with Gadget Heaven Accessories
             </h1>
@@ -21,8 +21,8 @@ const Banner = () => {
         </div>
       </div>
       {/* overlap bg */}
-      <div className="bg-[#FFFFFF4D] p-4 border">
-          
+      <div className="bg-[#FFFFFF4D] p-4 border w-[785px] mx-auto relative top-[-100px] rounded-xl flex justify-center items-center">
+          <img className="h-[500px] w-auto rounded-xl" src={banner_img} alt="" />
       </div>
     </div>
   );

@@ -1,18 +1,20 @@
-import { NavLink } from "react-router-dom";
+
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import love_img from '../../assets/love.png';
 import cart from '../../assets/cart.png';
+import { NavLink, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const links=<>
       <li> <NavLink to="/">Home</NavLink></li>
-      <li> <NavLink to="">Statistics</NavLink> </li>
-      <li><NavLink to="">Dashboard</NavLink> </li>
+      <li> <NavLink to="/statitics">Statistics</NavLink> </li>
+      <li><NavLink to="/dashboard">Dashboard</NavLink> </li>
   </>
-
+  const location=useLocation();
+ const isHomePage = location.pathname === "/";
 
   return (
-    <div className="navbar bg-base-100">
+    <div className={isHomePage? "navbar bg-[#9538E2] text-white rounded-t-lg": "navbar bg-base-100"}>
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
