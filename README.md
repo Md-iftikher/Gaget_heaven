@@ -32,4 +32,5 @@ Welcome to **Gadget Heaven**! This React-based e-commerce application offers a u
 - **Context API**: For state management of cart and wishlist functionalities.
 
 ### 🌐 Live Demo
-[Check out the live website here!](Insert Link Here)
+[Check out the live website here!  
+https://prismatic-zabaione-4afe4e.netlify.app/]

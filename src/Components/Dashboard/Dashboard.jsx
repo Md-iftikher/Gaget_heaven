@@ -68,16 +68,16 @@ const Dashboard = () => {
         </p>
         <div className="text-center mb-7">
           <button
-            className={`btn btn-sm px-8 rounded-3xl bg-[#9538E2] text-white mr-4 ${
-              activeTab === "cart" ? "bg-white text-[#5f258f]" : ""
+            className={`btn btn-sm px-8 rounded-3xl  text-black mr-4 ${
+              activeTab === "wishlist" ? "bg-[#5f258f] text-white" : ""
             }`}
             onClick={() => toggleTab("cart")}
           >
             Cart
           </button>
           <button
-            className={`btn btn-sm px-8 rounded-3xl bg-[#9538E2] text-white ${
-              activeTab === "wishlist" ? "bg-white text-[#55277a]" : ""
+            className={`btn btn-sm px-8 rounded-3xl text-black ${
+              activeTab === "cart" ? "bg-[#5f258f] text-[white]" : ""
             }`}
             onClick={() => toggleTab("wishlist")}
           >
