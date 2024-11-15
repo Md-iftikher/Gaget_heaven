@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useCart } from "../ContextApi/Context";
 import { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import suc from "../../assets/Group.png"
 
 const Dashboard = () => {
   const {
@@ -14,11 +16,13 @@ const Dashboard = () => {
   } = useCart();
 
   const [activeTab, setActiveTab] = useState("cart");
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleTab = (tab) => {
     setActiveTab(tab);
   };
   const [totalCost, setTotalCost] = useState("0.00");
+  const [modalcost, setmodalTotalcost]= useState(0);
 
   const calculateTotalCost = (cart) => {
     if (!Array.isArray(cart)) {
@@ -34,14 +38,24 @@ const Dashboard = () => {
   };
   useEffect(() => {
     const newTotalCost = calculateTotalCost(cart);
+    
     setTotalCost(newTotalCost);
   }, [cart]);
 
   const sortByPrice = () => {
     const sortedCart = [...cart].sort(
-      (a, b) => parseFloat(a.price) - parseFloat(b.price)
+      (a, b) => parseFloat(b.price) - parseFloat(a.price)
     );
     setCart(sortedCart);
+  };
+  const handlePurchase = () => {
+    setmodalTotalcost(totalCost);
+    setIsModalOpen(true);
+    clearCart();
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
   };
 
   return (
@@ -55,7 +69,7 @@ const Dashboard = () => {
         <div className="text-center mb-7">
           <button
             className={`btn btn-sm px-8 rounded-3xl bg-[#9538E2] text-white mr-4 ${
-              activeTab === "cart" ? "bg-white text-[#5d2a86]" : ""
+              activeTab === "cart" ? "bg-white text-[#5f258f]" : ""
             }`}
             onClick={() => toggleTab("cart")}
           >
@@ -63,7 +77,7 @@ const Dashboard = () => {
           </button>
           <button
             className={`btn btn-sm px-8 rounded-3xl bg-[#9538E2] text-white ${
-              activeTab === "wishlist" ? "bg-white text-[#5d2a86]" : ""
+              activeTab === "wishlist" ? "bg-white text-[#55277a]" : ""
             }`}
             onClick={() => toggleTab("wishlist")}
           >
@@ -81,23 +95,30 @@ const Dashboard = () => {
                 <h4 className="text-2xl font-bold">Cart Items</h4>
                 <div className="flex gap-2 justify-center items-center">
                   <p className="font-bold">Total Cost :$ {totalCost}</p>
-                  <button onClick={sortByPrice} className="btn btn-sm font-bold text-purple-700 border-purple-600">
+                  <button
+                    onClick={sortByPrice}
+                    className="btn btn-sm font-bold text-purple-700 border-purple-600"
+                  >
                     Sort By Price{" "}
                   </button>
-                  <button className="btn btn-sm bg-purple-600 text-white">
+                  <button
+                    onClick={handlePurchase}
+                    disabled={cart.length === 0}
+                    className="btn btn-sm bg-purple-600 text-white"
+                  >
                     Purchase
                   </button>
                 </div>
               </div>
-              <div className="grid gap-3">
+              <div className="grid gap-3 mt-5">
                 {cart.length > 0 ? (
                   cart.map((item, index) => (
-                    <div>
+                    <div className="bg-white w-[900px] mx-auto">
                       <div
                         key={index}
                         className="flex justify-between items-center border shadow-xl w-[900px] h-[132px] mx-auto"
                       >
-                        <div className="flex justify-center items-center">
+                        <div className="flex justify-center items-center ">
                           <div className="mr-3">
                             <img
                               className="w-[200px] h-[130px]"
@@ -105,7 +126,7 @@ const Dashboard = () => {
                               alt=""
                             />
                           </div>
-                          <div>
+                          <div className="">
                             <h2 className="text-xl font-bold">
                               {item.product_title}
                             </h2>
@@ -160,19 +181,19 @@ const Dashboard = () => {
         </div>
 
         {/* {Wishlist section /} */}
-        <div>
+        <div className="">
           {activeTab === "wishlist" && (
-            <div>
+            <div className="">
               <div>
                 <h4 className="text-2xl font-bold">Your Wishlist</h4>
               </div>
 
-              <div className="grid gap-3">
+              <div className="grid gap-3 mt-5">
                 {wishlist.length > 0 ? (
                   wishlist.map((item, index) => (
                     <div
                       key={index}
-                      className="flex justify-between items-center border shadow-xl w-[900px] h-[132px] mx-auto"
+                      className="flex justify-between items-center border shadow-xl w-[900px] h-[132px] mx-auto bg-white p-2"
                     >
                       <div className="flex justify-center items-center">
                         <div>
@@ -236,6 +257,27 @@ const Dashboard = () => {
           )}
         </div>
       </div>
+      {/* Modal */}
+      {isModalOpen && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full flex flex-col gap-2 justify-center items-center">
+            <div>
+                <img src={suc} alt="" />
+            </div>
+            <h2 className="text-2xl font-bold mb-4">Congratulations!</h2>
+            <p className="mb-4">Your purchase was successful!</p>
+            <p>Total Price:$ {modalcost} </p>
+            <Link to={"/"}>
+              <button
+                className="bg-purple-600 text-white rounded px-4 py-2 hover:bg-purple-700 transition duration-200"
+                onClick={handleCloseModal}
+              >
+                Close
+              </button>
+            </Link>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -3,12 +3,13 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import love_img from '../../assets/love.png';
 import cart from '../../assets/cart.png';
 import { NavLink, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const links=<>
-      <li> <NavLink to="/">Home</NavLink></li>
-      <li> <NavLink to="/statitics">Statistics</NavLink> </li>
-      <li><NavLink to="/dashboard">Dashboard</NavLink> </li>
+      <li className="font-bold"> <NavLink to="/">Home</NavLink></li>
+      <li className="font-bold"> <NavLink to="/statitics">Statistics</NavLink> </li>
+      <li className="font-bold"><NavLink to="/dashboard">Dashboard</NavLink> </li>
   </>
   const location=useLocation();
  const isHomePage = location.pathname === "/";
@@ -50,8 +51,10 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end flex gap-3">
-        <button className="btn btn-circle"><img className="w-5 h-5" src={cart} alt="" /></button>
-        <button className="btn btn-circle"><img className="w-5 h-5" src={love_img} alt="" /></button>
+       
+        <Link to="/dashboard"> <button className="btn btn-circle"><img className="w-5 h-5" src={cart} alt="" /></button></Link>
+        <Link to="/dashboard"> <button className="btn btn-circle"><img className="w-5 h-5" src={love_img} alt="" /></button></Link>
+        
       </div>
     </div>
   );

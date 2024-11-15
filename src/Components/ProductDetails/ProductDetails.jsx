@@ -26,7 +26,7 @@ const ProductDetails = () => {
     <div>
       <div className="bg-[#9538E2] p-16 h-96">
         <h3 className="text-center text-3xl text-white font-bold">
-          Product details: {product_id}
+          Product Details
         </h3>
         <p className="text-center text-[#ece5e5]">
           Explore the latest gadgets that will take your experience to the next
